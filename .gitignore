@@ -1,0 +1,65 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# ---- Virtual Environment ----
+venv/
+env/
+ENV/
+.venv/
+.virtualenv/
+
+# ---- Django ----
+*.log
+db.sqlite3
+media/
+staticfiles/
+static_root/
+local_settings.py
+
+# ---- Environment Variables ----
+.env
+.env.*
+!.env.example
+
+# ---- MySQL dumps ----
+*.sql
+*.sql.gz
+
+# ---- IDE / Editors ----
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ---- OS-generated ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Python Bytecode ----
+pip-wheel-metadata/
+*.pyc
+
+# ---- Temporary Files ----
+*.tmp
+*.temp
+*.swp
+*.bak
+
+# ---- Coverage / Testing ----
+htmlcov/
+.coverage
+.tox/
+.nox/
+coverage.xml
+.pytest_cache/
+
+
