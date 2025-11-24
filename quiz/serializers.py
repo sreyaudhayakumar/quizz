@@ -8,6 +8,16 @@ class OptionSerializer(serializers.ModelSerializer):
         model = Option
         fields = ["id", "text", "is_correct"]
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get("request")
+
+        #  hide is_correct from user
+        if request and request.method == "GET":
+            data.pop("is_correct", None)
+
+        return data
+
 
 class QuestionSerializer(serializers.ModelSerializer):
     options = OptionSerializer(many=True)

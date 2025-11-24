@@ -5,9 +5,15 @@ from .serializers import UserRegisterSerializer, LoginSerializer
 from .models import User
 
 
-class RegisterView(generics.CreateAPIView):
+class UserListCreateView(generics.ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserRegisterSerializer
+    
+class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserRegisterSerializer
+    lookup_field = "id"
+
 
 
 class LoginView(generics.GenericAPIView):
